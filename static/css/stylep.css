@@ -1,0 +1,136 @@
+/* Reset some default styles */
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: "Roboto", sans-serif;
+color: #0c0c0c;
+background-color: #f8f8f8;
+overflow-x: hidden;
+}
+
+.container {
+padding: 90px 0;
+}
+
+.container .title-text {
+font-weight: bold;
+margin: 0;
+}
+
+.container .prediction {
+display: flex;
+flex-direction: row;
+margin-top: 30px;
+}
+
+.container .predicted-image {
+flex: 1;
+}
+
+.container .predicted-image img {
+width: 100%;
+max-width: 100%;
+height: auto;
+display: block;
+}
+
+.container .class-info {
+flex: 1;
+margin-left: 20px;
+}
+
+.container .class-info h2 {
+position: relative;
+font-weight: bold;
+margin: 0;
+}
+
+.container .class-description {
+margin-top: 10px;
+}
+
+.container .symptoms h3,
+.container .treatment h3 {
+margin-top: 20px;
+font-weight: bold;
+}
+
+.container .symptoms ul,
+.container .treatment ul {
+list-style-type: disc;
+margin-left: 20px;
+}
+
+.container .treatment p {
+margin-top: 10px;
+}
+
+.container .disclaimer {
+margin-top: 20px;
+}
+
+/* Additional styles specific to your HTML structure can be added here */
+
+
+/* Header */
+.header_section {
+background: linear-gradient(45deg, rgba(255, 0, 204, 0.8), rgba(51, 51, 255, 0.8), rgba(0, 255, 204, 0.8), rgba(255, 204, 0, 0.8));
+background-size: 400% 400%;
+animation: gradientAnimationHeader 10s ease infinite;
+}
+
+/* Footer */
+.footer_section {
+background: linear-gradient(45deg, rgba(255, 0, 204, 0.8), rgba(51, 51, 255, 0.8), rgba(0, 162, 255, 0.8));
+background-size: 400% 400%;
+animation: gradientAnimationFooter 10s ease infinite;
+opacity: 0.8;
+}
+
+/* Page */
+body {
+background: linear-gradient(45deg, rgba(255, 0, 204, 0.8), rgba(51, 51, 255, 0.8), rgba(0, 140, 255, 0.8));
+background-size: 400% 400%;
+animation: gradientAnimation 10s ease infinite;
+}
+
+
+@keyframes gradientAnimationHeader {
+0% {
+    background-position: 0% 50%;
+}
+50% {
+    background-position: 100% 50%;
+}
+100% {
+    background-position: 0% 50%;
+}
+}
+
+@keyframes gradientAnimationFooter {
+0% {
+    background-position: 0% 50%;
+}
+50% {
+    background-position: 100% 50%;
+}
+100% {
+    background-position: 0% 50%;
+}
+}
+
+@keyframes gradientAnimation {
+0% {
+    background-position: 0% 50%;
+}
+50% {
+    background-position: 100% 50%;
+}
+100% {
+    background-position: 0% 50%;
+}
+}
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link to your new CSS file -->
+
+    <link href="{{ url_for('static', filename='css/stylep.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/responsive.css') }}" rel="stylesheet" />
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Yeseva+One&display=swap" rel="stylesheet">
+    
+    <title>Eye Disease Recognition App - Prediction</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title-text">AI Based Eye Disease Recognition App - Prediction</h1>
+        <div class="prediction">
+            <div class="predicted-image">
+                <img src="{{ user_image }}" alt="User Image" class="img-thumbnail">
+            </div>
+            <div class="class-info">
+                <h2>{{ predicted_class_name }}</h2>
+            </div>
+            <div class="class-description">
+                <h2>Description</h2>
+                <p>{{ predicted_class_description }}</p>
+            </div>
+            <div class="symptoms">
+                <h3>Symptoms</h3>
+                <ul>
+                    {% for symptom in predicted_class_symptoms %}
+                        <li>{{ symptom }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="treatment">
+                <h3>Treatment</h3>
+                <p>{{ treatment_info[predicted_class_name]['description'] }}</p>
+                <h4>Medicines (Consult a doctor before use)</h4>
+                <ul>
+                    {% for medicine in treatment_info[predicted_class_name]['medicines'] %}
+                        <li>{{ medicine }}</li>
+                    {% endfor %}
+                </ul>
+                <p class="disclaimer">Disclaimer: It's important to consult a medical professional before taking any medications. The information provided here is for educational purposes only and should not be considered medical advice.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Function to hide the navigation bar after 3 seconds
+        setTimeout(function () {
+            document.querySelector('.navbar').style.top = '-100px';
+        }, 3000);
+    </script>
+</body>
+</html>
